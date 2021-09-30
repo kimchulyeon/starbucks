@@ -1,23 +1,3 @@
-// 돋보기 검색창 작동
-const searchEl = document.querySelector('.search')
-const searchInputEl = searchEl.querySelector('input')
-
-searchEl.addEventListener('click', function () {
-  searchInputEl.focus()
-
-});
-
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-});
-
-
 // 스크롤 내릴 때 뱃지 사라지게 함
 const toTopEl = document.querySelector('#to-top');
 const badgeEl = document.querySelector('header .badges');
@@ -162,8 +142,6 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller());
 });
 
-// 올해 몇년도 인지
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
+
 
 // scroll to plugin
